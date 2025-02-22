@@ -1,8 +1,7 @@
-output "controllers_public_ips" {
-  value = aws_instance.controller.*.public_ip
+output "controller_public_ips" {
+  value = module.compute_resources.controller_public_ips
 }
 
-output "workers_public_ips" {
-  value = aws_instance.worker.*.public_ip
+output "worker_public_ips" {
+  value = module.compute_resources.worker_public_ips
 }
-
