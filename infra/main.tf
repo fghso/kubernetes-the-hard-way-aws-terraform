@@ -7,18 +7,6 @@ provider "aws" {
   region  = "${var.region}"
 }
 
-terraform {
-  backend "s3" {
-    bucket         = "k8s-the-hard-way-bucket"
-    key            = "tutorial/terraform.tfstate"
-    profile        = "dev-staging"
-    region         = "us-east-2"
-
-    dynamodb_table = "k8s-the-hard-way-locks"
-    encrypt        = true
-  }
-}
-
 resource "aws_vpc" "k8s" {
  cidr_block = "10.240.0.0/16"
  
