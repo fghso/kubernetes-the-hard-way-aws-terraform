@@ -32,3 +32,7 @@ variable "worker_pod_cidrs" {
     "10.200.2.0/24",
   ]
 }
+
+locals {
+  tls_path = abspath("${path.root}/tls")
+}

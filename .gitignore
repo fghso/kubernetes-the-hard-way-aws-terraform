@@ -36,3 +36,4 @@ terraform.rc
 # Ignore generated files
 **/tls/gen/
 sshkey*
+kubeconfig/
